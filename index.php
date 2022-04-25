@@ -8,7 +8,7 @@ abstract class Creator
 class Factory1 extends Creator
 {
 
-    public function make()
+    public function make(): ConcreteInterface
     {
         return new Concrete1();
     }
@@ -17,7 +17,7 @@ class Factory1 extends Creator
 class Factory2 extends Creator
 {
 
-    public function make()
+    public function make(): ConcreteInterface
     {
         return new Concrete2();
     }
@@ -31,7 +31,7 @@ interface ConcreteInterface
 class Concrete1 implements ConcreteInterface
 {
 
-    public function something()
+    public function something(): string
     {
         return 'Concrete 1';
     }
@@ -40,7 +40,7 @@ class Concrete1 implements ConcreteInterface
 class Concrete2 implements ConcreteInterface
 {
 
-    public function something()
+    public function something(): string
     {
         return 'Concrete 2';
     }
